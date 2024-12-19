@@ -14,11 +14,11 @@ from app.handlers import user_hand
 from aiogram.enums import ParseMode
 from app.keyboards.set_menu import set_main_menu
 from aiogram.client.default import DefaultBotProperties
-# from aiogram.client.session.aiohttp import AiohttpSession
+from aiogram.client.session.aiohttp import AiohttpSession
 from app.config_data.config import Config, load_config
 
 
-# session = AiohttpSession(proxy="http://89.145.162.81:1080")
+session = AiohttpSession(proxy="http://89.145.162.81:1080")
 
 
 # Основная функция запуска
@@ -33,7 +33,7 @@ async def main():
     # Инициализируем бот и диспетчер
     bot = Bot(
         token=config.tg_bot.token,
-        # session=session
+        session=session
     )
     dp = Dispatcher()
 
