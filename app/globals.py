@@ -5,7 +5,7 @@ import os
 
 # Конфигурация
 GIGACHAT_API_KEY = "NjZhMTRlMjItMTU5OC00OGM2LThhMWQtODJiZDI4Nzk2MmYwOmIxN2Q0N2I3LTI4NjQtNDkzNi1iZmQyLTBmNTRjMjAxYzlmNw=="
-DB_PATH =os.path.abspath( "C:/Users/User/PycharmProjects/gigiChat/app/db/text_rewriter.db")
+DB_PATH = os.path.join("../text_rewriter.db")
 
 # Состояния
 class MainStates(StatesGroup):

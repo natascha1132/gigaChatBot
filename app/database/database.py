@@ -1,10 +1,11 @@
 
 import sqlite3
 import logging
+import os
 
 class Database:
-    def __init__(self, db_path="C:/Users/User/PycharmProjects/gigiChat/app/db/text_rewriter.db"):
-        self.connection = sqlite3.connect(db_path)
+    def __init__(self, db_path):
+        self.connection = sqlite3.connect(os.path.abspath(db_path))
         self.cursor = self.connection.cursor()
         self._create_tables()
 
