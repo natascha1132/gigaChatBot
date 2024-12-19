@@ -1,10 +1,11 @@
 from app.api.gigachat_api import GigaChatAPI
 from aiogram.fsm.state import StatesGroup, State
 from app.database.database import Database
+import os
 
 # Конфигурация
 GIGACHAT_API_KEY = "NjZhMTRlMjItMTU5OC00OGM2LThhMWQtODJiZDI4Nzk2MmYwOmIxN2Q0N2I3LTI4NjQtNDkzNi1iZmQyLTBmNTRjMjAxYzlmNw=="
-DB_PATH = "C:/Users/User/PycharmProjects/gigiChat/app/db/text_rewriter.db"
+DB_PATH =os.path.abspath( "C:/Users/User/PycharmProjects/gigiChat/app/db/text_rewriter.db")
 
 # Состояния
 class MainStates(StatesGroup):
